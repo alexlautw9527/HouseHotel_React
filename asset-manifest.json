@@ -1,0 +1,43 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5b736e08.css",
+    "main.js": "/static/js/main.01c2f456.js",
+    "static/js/981.ac928d96.chunk.js": "/static/js/981.ac928d96.chunk.js",
+    "static/media/bg2.png": "/static/media/bg2.debc56a4adc741f6eb58.png",
+    "static/media/bg3.png": "/static/media/bg3.1e8bd46283cf27b107a0.png",
+    "static/media/bg4.png": "/static/media/bg4.e186f2e767f77d1fcee6.png",
+    "static/media/bg1.png": "/static/media/bg1.9ed1a11adf9d7c4ea502.png",
+    "static/media/houseIcon.svg": "/static/media/houseIcon.a409488e3a3dd6291a89e7d4890af957.svg",
+    "static/media/payment-icon.svg": "/static/media/payment-icon.e6aa3825174c3fa466e18a664a12f95a.svg",
+    "static/media/Pet-Friendly-icon.svg": "/static/media/Pet-Friendly-icon.b1858af7ab6047655aee9b8058e9067e.svg",
+    "static/media/Telephone-icon.svg": "/static/media/Telephone-icon.2cc7c0b462ec39b274a42b6b0758ec48.svg",
+    "static/media/Mini-Bar-icon.svg": "/static/media/Mini-Bar-icon.94c10479fbc21016c4f3b0c39bef6327.svg",
+    "static/media/Breakfast-icon.svg": "/static/media/Breakfast-icon.66db71506a36db7079e94fa47ce1a2cb.svg",
+    "static/media/Room-Service-icon.svg": "/static/media/Room-Service-icon.54d3597946dead30c0d0a1fdf560deba.svg",
+    "static/media/Sofa-icon.svg": "/static/media/Sofa-icon.e712e2b0548dca390f6c11e738d1c58e.svg",
+    "static/media/Great-View-icon.svg": "/static/media/Great-View-icon.74776dea09fd3b31f18f8e1c9b7aeaa2.svg",
+    "static/media/Child-Friendly-icon.svg": "/static/media/Child-Friendly-icon.d90e3a5fb45486e46d455eb9ffee8dd3.svg",
+    "static/media/Smoke-Free-icon.svg": "/static/media/Smoke-Free-icon.c50e0a0799054423eea529474928057d.svg",
+    "static/media/Air-Conditioner-icon.svg": "/static/media/Air-Conditioner-icon.30f71a4994af13550ea29b28cb5045b0.svg",
+    "static/media/Refrigerator-icon.svg": "/static/media/Refrigerator-icon.f5488fa2d085abee58ea8184616b2739.svg",
+    "static/media/Wi-fi-icon.svg": "/static/media/Wi-fi-icon.898a8b4f871ca3f01a55ea26a35a4bab.svg",
+    "static/media/search-icon.svg": "/static/media/search-icon.829f5c23b41abad8f51601da4803afd7.svg",
+    "static/media/statusBg-icon.svg": "/static/media/statusBg-icon.f315a4b53b9313e9e76c9a7af67254da.svg",
+    "static/media/booking-icon.svg": "/static/media/booking-icon.fee732895440d5c93a56129a22a97e30.svg",
+    "index.html": "/index.html",
+    "static/media/cross-icon.svg": "/static/media/cross-icon.b63ec7f270f10614af9117e812ea1552.svg",
+    "static/media/crossWhite-icon.svg": "/static/media/crossWhite-icon.005552abb85b0660e20c3086c813ea0d.svg",
+    "static/media/cancel-icon.svg": "/static/media/cancel-icon.637da60078b2955ab83ac86216dd5af0.svg",
+    "static/media/leftArrow-icon.svg": "/static/media/leftArrow-icon.1d7c9469a9b044803a20a8251e63b38f.svg",
+    "static/media/check-icon.svg": "/static/media/check-icon.f7503a11740c97cf5f605ed91a0b8cc2.svg",
+    "static/media/rightArrow-icon.svg": "/static/media/rightArrow-icon.13dcc0c6a0bbd20d5ed142b93b106250.svg",
+    "static/media/ok-icon.svg": "/static/media/ok-icon.07536bc203e4a99996251cbebc868253.svg",
+    "main.5b736e08.css.map": "/static/css/main.5b736e08.css.map",
+    "main.01c2f456.js.map": "/static/js/main.01c2f456.js.map",
+    "981.ac928d96.chunk.js.map": "/static/js/981.ac928d96.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.5b736e08.css",
+    "static/js/main.01c2f456.js"
+  ]
+}
