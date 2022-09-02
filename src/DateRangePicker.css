@@ -1,0 +1,61 @@
+.rdrDateDisplayWrapper{
+ display: none; 
+}
+
+.rdrStartEdge.rdrEndEdge ~ .rdrDayNumber{
+  background-color: #38470B;
+}
+
+.rdrStartEdge, .rdrInRange, .rdrEndEdge{
+  background-color: #38470B;
+  opacity: 0.2; 
+}
+
+.rdrDayDisabled .rdrInRange ~.rdrDayNumber, 
+.rdrDayDisabled .rdrStartEdge~.rdrDayNumber, 
+.rdrDayDisabled .rdrEndEdge~.rdrDayNumber, 
+.rdrDayDisabled .rdrSelected~.rdrDayNumber{
+   filter: grayscale(100%) opacity(60%);
+}
+
+
+.rdrDayPassive .rdrInRange~ .rdrDayNumber, 
+.rdrDayPassive .rdrStartEdge~ .rdrDayNumber, 
+.rdrDayPassive .rdrEndEdge~ .rdrDayNumber, 
+.rdrDayPassive .rdrSelected~ .rdrDayNumber,
+.rdrDayPassive~ .rdrDayNumber{
+  background-color: transparent; 
+}
+
+.rdrStartEdge ~ .rdrDayNumber{
+  background-color: #38470B;
+  border-radius: 999px;
+}
+
+.rdrEndEdge ~ .rdrDayNumber{
+  background-color: #949C7C;
+  border-radius: 999px;
+}
+
+
+.rdrMonthName{
+  display: flex;
+  justify-content: center;
+  color: #38470B;
+}
+
+.rdrWeekDays{
+  border-bottom: #d7d7d7 1px solid;
+}
+
+.rdrDayToday .rdrDayNumber span:after{
+  background: #38470B !important;
+}
+
+.rdrDayDisabled .rdrDayNumber span{
+  text-decoration: line-through;
+}
+
+.rdrCalendarWrapper{
+  border: #949C7C 1px solid;
+}

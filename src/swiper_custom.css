@@ -1,0 +1,33 @@
+
+/* 
+.indexBgSwiper.swiper{
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+}
+
+.indexBgSwiper .swiper-slide {
+  background-color: black;
+}
+
+.indexBgSwiper .swiper-wrapper img{
+  width: 100vw;
+  height: 100vh;
+  z-index: -1;
+  object-fit: cover;
+  opacity: 0.2;
+}
+
+.indexBgSwiperPagination .swiper-pagination-bullet {
+  background: transparent;
+  border: 1px solid white;
+  opacity:1
+}
+
+.indexBgSwiperPagination .swiper-pagination-bullet-active {
+  background: #ffff;
+}
+
+.indexBgSwiperPagination.swiper-pagination-horizontal{
+  z-index: 2;
+} */

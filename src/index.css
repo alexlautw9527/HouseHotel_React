@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@300;400;700&display=swap');
+@import 'react-date-range/dist/styles.css'; 
+@import 'react-date-range/dist/theme/default.css'; 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@layer base{
+  html {
+    @apply text-primary
+  }
+  ul {
+    margin-left: 0;
+    padding-left: 24px;
+    list-style-position: outside;
+  }
+}
+
+
+@layer components{
+
+  .bookingForm input{
+    @apply w-full h-10 text-primary px-3
+  }
+
+  .bookingForm label{
+    @apply block mb-4 
+  }
+
+  .bookingForm {
+    @apply text-white
+  }
+
+  .bookingForm .formInvalidText{
+    @apply text-rose-300
+  }
+
+
+ .indexBgSwiper.swiper{
+  @apply w-screen h-screen absolute;
+}
+
+.indexBgSwiper .swiper-slide {
+  @apply bg-black;
+}
+
+.indexBgSwiper .swiper-wrapper img{
+  @apply w-screen h-screen -z-50  object-cover opacity-20;
+}
+
+.indexBgSwiperPagination .swiper-pagination-bullet {
+  @apply bg-transparent border border-white opacity-100;
+}
+
+.indexBgSwiperPagination .swiper-pagination-bullet-active {
+  @apply bg-white;
+}
+
+.indexBgSwiperPagination.swiper-pagination-horizontal{
+  @apply z-30;
+}
+
+.roomBgSwiper{
+  @apply h-full;
+}
+
+.roomBgSwiperPagination {
+  @apply z-30;
+}
+
+.roomBgSwiperPagination .swiper-pagination-bullet {
+  @apply border-primary border bg-transparent;
+}
+
+.roomBgSwiperPagination .swiper-pagination-bullet-active {
+  @apply bg-primary;
+}
+
+.pswp {
+  --pswp-placeholder-bg: transparent !important;
+}
+
+.pswp img {
+  max-width: 1000;
+  object-fit: contain;
+}
+
+
+
+}
