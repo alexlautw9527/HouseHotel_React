@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/HouseHotel_React/static/css/main.41ff35e4.css",
-    "main.js": "/HouseHotel_React/static/js/main.d7710d1a.js",
+    "main.css": "/HouseHotel_React/static/css/main.6d172cb2.css",
+    "main.js": "/HouseHotel_React/static/js/main.9821b5d1.js",
     "static/js/981.ac928d96.chunk.js": "/HouseHotel_React/static/js/981.ac928d96.chunk.js",
     "static/media/bg2.png": "/HouseHotel_React/static/media/bg2.debc56a4adc741f6eb58.png",
     "static/media/bg3.png": "/HouseHotel_React/static/media/bg3.1e8bd46283cf27b107a0.png",
@@ -32,12 +32,12 @@
     "static/media/check-icon.svg": "/HouseHotel_React/static/media/check-icon.f7503a11740c97cf5f605ed91a0b8cc2.svg",
     "static/media/rightArrow-icon.svg": "/HouseHotel_React/static/media/rightArrow-icon.13dcc0c6a0bbd20d5ed142b93b106250.svg",
     "static/media/ok-icon.svg": "/HouseHotel_React/static/media/ok-icon.07536bc203e4a99996251cbebc868253.svg",
-    "main.41ff35e4.css.map": "/HouseHotel_React/static/css/main.41ff35e4.css.map",
-    "main.d7710d1a.js.map": "/HouseHotel_React/static/js/main.d7710d1a.js.map",
+    "main.6d172cb2.css.map": "/HouseHotel_React/static/css/main.6d172cb2.css.map",
+    "main.9821b5d1.js.map": "/HouseHotel_React/static/js/main.9821b5d1.js.map",
     "981.ac928d96.chunk.js.map": "/HouseHotel_React/static/js/981.ac928d96.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.41ff35e4.css",
-    "static/js/main.d7710d1a.js"
+    "static/css/main.6d172cb2.css",
+    "static/js/main.9821b5d1.js"
   ]
 }
