@@ -1,6 +1,4 @@
-import { useParams } from "react-router-dom";
 import { useState, useEffect } from 'react';
-import useFetch from '../hooks/useFetch';
 
 // Import Swiper React components
 import { Swiper, SwiperSlide, useSwiper } from 'swiper/react';
@@ -24,8 +22,7 @@ function Gallery({ srcArr, children }) {
         pswpModule: () => import('photoswipe'),
         children: 'a',
         loop: global_swiper_photoswipe_loop_setting,
-        showHideAnimationType: 'none', /* options: fade, zoom, none */
-        /* ## Hiding a specific UI element ## */
+        showHideAnimationType: 'none',
         zoom: false,
         initialZoomLevel: 'fit',
         close: true,
@@ -42,7 +39,6 @@ function Gallery({ srcArr, children }) {
 
       lightbox.on('change', () => {
         const { pswp } = lightbox;
-        // console.log('change');
         swiper.slideTo(pswp.currIndex, 0, false);
         // console.log('Slide index', pswp.currIndex);
         // console.log('Slide object', pswp.currSlide);
@@ -98,20 +94,17 @@ function Gallery({ srcArr, children }) {
             return (
               <SwiperSlide className="w-full">
                 <a href={ele}>
-                  {/* <div className="roomInfoImageFilter"> */}
                   <div
                     style={{
                       backgroundImage: `linear-gradient(180deg, transparent 30%, #FFFFFF 100%), url(${ele})`
                     }}
                     className="bg-cover h-full">
                   </div>
-                  {/* </div> */}
                 </a>
               </SwiperSlide>
             )
           })
         }
-
         {children}
       </Swiper>
     </>

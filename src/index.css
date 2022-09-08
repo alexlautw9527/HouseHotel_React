@@ -19,73 +19,149 @@
 
 
 @layer components{
-
   .bookingForm input{
     @apply w-full h-10 text-primary px-3
   }
-
+  
   .bookingForm label{
     @apply block mb-4 
   }
-
+  
   .bookingForm {
     @apply text-white
   }
-
+  
   .bookingForm .formInvalidText{
     @apply text-rose-300
   }
+}
 
 
- .indexBgSwiper.swiper{
-  @apply w-screen h-screen absolute;
+
+
+
+/*-------------------------
+--------Swiper custom css
+-------------------------*/
+
+/*index swiper*/
+.indexBgSwiper.swiper{
+@apply w-screen h-screen absolute;
 }
 
 .indexBgSwiper .swiper-slide {
-  @apply bg-black;
+@apply bg-black;
 }
 
 .indexBgSwiper .swiper-wrapper img{
-  @apply w-screen h-screen -z-50  object-cover opacity-20;
+@apply w-screen h-screen -z-50  object-cover opacity-20;
 }
 
 .indexBgSwiperPagination .swiper-pagination-bullet {
-  @apply bg-transparent border border-white opacity-100;
+@apply bg-transparent border border-white opacity-100;
 }
 
 .indexBgSwiperPagination .swiper-pagination-bullet-active {
-  @apply bg-white;
+@apply bg-white;
 }
 
 .indexBgSwiperPagination.swiper-pagination-horizontal{
-  @apply z-30;
+@apply z-30;
 }
 
+
+/*roomInfo swiper*/
 .roomBgSwiper{
-  @apply h-full;
+@apply h-full;
 }
 
 .roomBgSwiperPagination {
-  @apply z-30;
+@apply z-30;
 }
 
 .roomBgSwiperPagination .swiper-pagination-bullet {
-  @apply border-primary border bg-transparent;
+@apply border-primary border bg-transparent;
 }
 
 .roomBgSwiperPagination .swiper-pagination-bullet-active {
-  @apply bg-primary;
+@apply bg-primary;
 }
 
+/*-------------------------
+--------Light Box
+-------------------------*/
 .pswp {
-  --pswp-placeholder-bg: transparent !important;
+--pswp-placeholder-bg: transparent !important;
 }
 
 .pswp img {
-  max-width: 1000;
-  object-fit: contain;
+max-width: 1000;
+object-fit: contain;
 }
 
 
+/*-------------------------
+--------DateRange
+-------------------------*/
 
-}
+.rdrDateDisplayWrapper{
+  display: none; 
+ }
+ 
+ .rdrStartEdge.rdrEndEdge ~ .rdrDayNumber{
+   background-color: #38470B;
+ }
+ 
+ .rdrStartEdge, .rdrInRange, .rdrEndEdge{
+   background-color: #38470B;
+   opacity: 0.2; 
+ }
+ 
+ .rdrDayDisabled .rdrInRange ~.rdrDayNumber, 
+ .rdrDayDisabled .rdrStartEdge~.rdrDayNumber, 
+ .rdrDayDisabled .rdrEndEdge~.rdrDayNumber, 
+ .rdrDayDisabled .rdrSelected~.rdrDayNumber{
+    filter: grayscale(100%) opacity(60%);
+ }
+ 
+ 
+ .rdrDayPassive .rdrInRange~ .rdrDayNumber, 
+ .rdrDayPassive .rdrStartEdge~ .rdrDayNumber, 
+ .rdrDayPassive .rdrEndEdge~ .rdrDayNumber, 
+ .rdrDayPassive .rdrSelected~ .rdrDayNumber,
+ .rdrDayPassive~ .rdrDayNumber{
+   background-color: transparent; 
+ }
+ 
+ .rdrStartEdge ~ .rdrDayNumber{
+   background-color: #38470B;
+   border-radius: 999px;
+ }
+ 
+ .rdrEndEdge ~ .rdrDayNumber{
+   background-color: #949C7C;
+   border-radius: 999px;
+ }
+ 
+ 
+ .rdrMonthName{
+   display: flex;
+   justify-content: center;
+   color: #38470B;
+ }
+ 
+ .rdrWeekDays{
+   border-bottom: #d7d7d7 1px solid;
+ }
+ 
+ .rdrDayToday .rdrDayNumber span:after{
+   background: #38470B !important;
+ }
+ 
+ .rdrDayDisabled .rdrDayNumber span{
+   text-decoration: line-through;
+ }
+ 
+ .rdrCalendarWrapper{
+   border: #949C7C 1px solid;
+ }

@@ -16,7 +16,7 @@ const fetchF2E = axios.create({
 
 async function fff() {
   let res = await fetchF2E.request(url, postData)
-  console.log(res.data)
+  cancelIcon(res.data)
 }
 
 fff()

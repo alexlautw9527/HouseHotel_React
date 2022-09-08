@@ -1,7 +1,6 @@
 import { useState, useEffect } from 'react';
-import useFetch from './hooks/useFetch';
+import { useFetch } from '../../hooks/useFetch';
 
-// Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from "swiper";
 
@@ -9,22 +8,19 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-// import './swiper_custom.css'
 
-import GridBrick from './components/GridBrick';
-import SpinnerModel from './components/SpinnerModal';
+import GridBrick from './GridBrick';
+import SpinnerModel from '../common/SpinnerModal';
 
-import mainLogo from './images/houseIcon.svg'
-import bg1 from './images/bg1.png'
-import bg2 from './images/bg2.png'
-import bg3 from './images/bg3.png'
-import bg4 from './images/bg4.png'
+import { imageSrc } from '../../helpers/image_index';
 
 
 export default function Landing() {
 
+
   const { data, loading, error } = useFetch("rooms", "GET", {})
-  useEffect(() => { console.log(data) }, [data])
+  const { mainLogo, bg1, bg2, bg3, bg4 } = imageSrc.indexBackground
+
   return (
     <>
       <div className='h-screen flex flex-col justify-center'>

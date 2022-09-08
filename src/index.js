@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Landing from './Landing'
-import RoomInfo from './components/RoomInfo'
+import Landing from './components/landing/Landing'
+import RoomInfo from './components/roominfo/RoomInfo'
 import './index.css';
 import {
   HashRouter,

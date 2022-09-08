@@ -1,37 +1,59 @@
-import { useEffect, useState } from 'react'
-import RoomAmenityIcon from './RoomAmenityIcon'
-import { useBooking, BookingContext } from '../hooks/useBookingContext'
+import { useBookingContext } from '../../hooks/useBookingContext'
+
+import RoomAmenityIcon from '../common/RoomAmenityIcon'
 import BookingForm from './BookingForm'
 
-import searchIcon from '../images/icon/search-icon.svg'
-import paymentIcon from '../images/icon/payment-icon.svg'
-import bookingIcon from '../images/icon/booking-icon.svg'
-import rightArrowIcon from '../images/icon/rightArrow-icon.svg'
-import crossIcon from '../images/icon/cross-icon.svg'
+import { MODAL_ACTION, ACTION } from '../../actions/action_type'
+
+import { imageSrc } from '../../helpers/image_index'
+
+
+export default function BookingPage({ handleBookingStatusChange, onCloseModalClick }) {
+
+  const { bookingState, bookingDispatch, modalState, modalDispatch } = useBookingContext()
+  const { amenities, descriptionShortStr, roomData } = bookingState
+  const {
+    rightArrowIcon,
+    searchIcon,
+    paymentIcon,
+    bookingIcon,
+    crossIcon,
+  } = imageSrc.general
 
 
 
-function BookingPage({ handleBookingStatusChange, onModelClick }) {
 
-  const { amenities, descriptionShortStr, roomData } = useBooking()
+  function handleBookingStatusChange(isSuccess) {
+    isSuccess ? modalDispatch({ type: MODAL_ACTION.SET_SUCCESS_STATUS }) : modalDispatch({ type: MODAL_ACTION.SET_FAILED_STATUS })
+  }
 
-  useEffect(() => { console.log(amenities) }, [amenities])
+  function handleCalenderDateChange(item, dateType) {
+    bookingDispatch({
+      type: ACTION.CHANGE_SINGLEDATE, payload: {
+        [dateType]: item
+      }
+    })
+  }
 
   return (
     <>
-      <div className="flex w-full">
+      <main className="flex w-full h-full">
 
-        <div className="basis-2/5 bg-primary text-primary px-10 pt-10 pb-5">
+        <section className="basis-2/5 bg-primary text-primary px-10 pt-10 pb-5">
           <BookingForm
             onBookingStatusChange={handleBookingStatusChange}
+            onCalenderDateChange={handleCalenderDateChange}
           />
-        </div>
-        <div className="basis-4/5 bg-white px-10 pt-12 relative">
-          <button className='absolute top-3 right-3'
-            onClick={() => { onModelClick(false); console.log('hi') }}
+        </section>
+
+        <div className="basis-4/5 bg-white px-10 pt-12 relative overflow-scroll">
+          <button
+            className='absolute top-3 right-3'
+            onClick={() => { onCloseModalClick() }}
           >
             <img src={crossIcon} alt="" />
           </button>
+
           <section>
             <div className='flex items-center'>
               <h1 className="text-xl font-bold">
@@ -43,14 +65,26 @@ function BookingPage({ handleBookingStatusChange, onModelClick }) {
 
             <div className='py-3'>
               <div className='mb-7'>
-                <p>{descriptionShortStr}</p>
-                <p> {`平日（一～四）價格：${roomData['normalDayPrice']} / 假日（五〜日）價格：${roomData['holidayPrice']}`}</p>
+                <p> {
+                  [
+                    descriptionShortStr['guestRangeStr'],
+                    descriptionShortStr['breakfastAvailableStr'],
+                    descriptionShortStr['bedNumStr'],
+                    descriptionShortStr['privateBathAvailableStr'],
+                    descriptionShortStr['footageStr']
+                  ].join('・')
+                }</p>
+                <p>
+                  {
+                    `平日（一～四）價格：${roomData['normalDayPrice']} / 假日（五〜日）價格：${roomData['holidayPrice']}`
+                  }
+                </p>
               </div>
 
 
               <div className='flex flex-wrap gap-4'>
                 {
-                  amenities && amenities.filter(ele => ele['isAvailable'] === true).map(
+                  amenities.filter(ele => ele['isAvailable'] === true).map(
                     ele => {
                       return (
                         <div className="">
@@ -140,13 +174,10 @@ function BookingPage({ handleBookingStatusChange, onModelClick }) {
                   </p>
                 </div>
               </section>
-
-
             </div>
           </section>
         </div>
-      </div >
+      </main >
     </>
   )
 }
-export default BookingPage

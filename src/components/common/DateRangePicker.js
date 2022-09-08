@@ -2,10 +2,9 @@ import { useEffect, useState } from 'react'
 import { DateRange } from 'react-date-range';
 import 'react-date-range/dist/styles.css'; // main css file
 import 'react-date-range/dist/theme/default.css'; // theme css file
-import '../DateRangePicker.css'
 
 
-function DateRangePicker({ minDate, maxDate, disableDateArr, dateRange, setDateRange, months }) {
+function DateRangePicker({ minDate, maxDate, disableDateArr, dateRange, setDateRange, months, onDateRangeChange }) {
 
 
 
@@ -15,7 +14,8 @@ function DateRangePicker({ minDate, maxDate, disableDateArr, dateRange, setDateR
       minDate={minDate}
       maxDate={maxDate}
       disabledDates={disableDateArr}
-      onChange={item => setDateRange([item.selection])}
+      onChange={item => onDateRangeChange(item)}
+
       moveRangeOnFirstSelection={false}
       ranges={dateRange}
       months={months}

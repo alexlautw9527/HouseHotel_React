@@ -33,7 +33,6 @@ function App() {
       .then(image => {
         // Create a local URL of that image
         const localUrl = URL.createObjectURL(image);
-        console.log(localUrl);
       });
   }, []);
 
